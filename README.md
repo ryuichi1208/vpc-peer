@@ -1,7 +1,11 @@
 # vpc-peer
 handson
 
-### Terraform
+Since I started using terraform, I will build a convenient library collection while taking notes.
+
+Basically, we will only support the latest version, so we will not check the operation with the old version.
+
+### Terraform　
 
 ``` bash
 $ tfenv use 0.13.5
