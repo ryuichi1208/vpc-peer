@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+eval "$(jq -r '@sh "VAL=\(.foo)"')"
+BAR="${VAL} qux"
+jq -n --arg bar "${BAR}" '{"bar":$bar}'
