@@ -1,0 +1,19 @@
+#!/bin/bash -
+
+if ! unzip -h 2&> /dev/null; then
+  echo "aborting - unzip not installed and required"
+  exit 1
+fi
+
+if curl -h 2&> /dev/null; then
+  nettool="curl"
+elif wget -h 2&> /dev/null; then
+  nettool="wget"
+else
+  echo "aborting - wget or curl not installed and required"
+  exit 1
+fi
+
+if jq --help 2&> /dev/null; then
+  nettool="${nettool}jq"
+fi
